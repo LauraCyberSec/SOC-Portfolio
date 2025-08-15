@@ -1,0 +1,39 @@
+# SOC Case Note – Suspicious Download (GitHub)
+
+**Date:** 2025-08-15  
+**Alert Name:** GitHub Download Detected  
+**Description:**  
+Rule triggered on download from GitHub. While GitHub hosts legitimate projects, it can also host malicious code and exploits.
+
+---
+
+## Alert Details
+- **Accessed URL:** https://github.com/facebook/react  
+- **Source User:** G.Chandler  
+- **Source Host:** LPT-IT-063  
+- **Source Network:** VPN/DEVELOPERS  
+
+---
+
+## Investigation Steps
+1. Verified repository – `facebook/react` is an official, legitimate project.
+2. Checked business need – User is a developer, and access aligns with job role.
+3. No indicators of malicious code in this repo; matches known legitimate source.
+
+---
+
+## Findings
+- The repository is legitimate and widely used in web development.
+- No suspicious commits, forks, or cloned repos detected during review.
+- Activity is consistent with expected developer tasks.
+
+---
+
+## Verdict
+**Benign** – Approved for use based on business need and verified source.
+
+---
+
+## Preventive Measures
+- Maintain allowlist of approved GitHub repositories for developers.
+- Continue monitoring for downloads from unverified sources.
